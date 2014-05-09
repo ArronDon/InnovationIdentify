@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">innovationIdentity_01</string>
+    <!-- main -->
+    <string name="btn_activity_behind_login_text">登录</string>
+    <!-- tab textview -->
+    <string name="tab1">Click me</string>
+    <string name="tab2">Click me again</string>
+    <string name="tab3">Click me again please</string>
+    <!-- 登陆模块 -->
+    <string name="str_tv_main_activity_title">请输入用户名和密码</string>
+	<string name="str_edt_main_activity_username">username</string>
+	<string name="str_edt_main_activity_password">password</string>
+	<string name="str_btn_main_activity_login">登录</string>
+	<string name="str_btn_main_activity_register">注册</string>
+	
+</resources>
