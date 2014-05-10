@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">innovationIdentity_01</string>
@@ -6,7 +7,7 @@
     <string name="btn_activity_behind_homepage_text">首页</string>
     <string name="btn_activity_behind_settings_text">设置</string>
     <string name="btn_activity_behind_help_text">帮助</string>
-    <string name="btn_activity_behind_teamintro_text">关于Innovation</string>
+    <string name="btn_activity_behind_teaminfo_text">关于Innovation</string>
     <!-- tab textview -->
     <string name="tab2_start_camera_text">拍照</string>
     <string name="tab2_select_image_text">选择图片</string>
@@ -14,9 +15,12 @@
     <string name="tab3">Click me again please</string>
     <!-- 登陆模块 -->
     <string name="str_tv_main_activity_title">请输入用户名和密码</string>
-	<string name="str_edt_main_activity_username">username</string>
-	<string name="str_edt_main_activity_password">password</string>
-	<string name="str_btn_main_activity_login">登录</string>
-	<string name="str_btn_main_activity_register">注册</string>
-	
+    <string name="str_edt_main_activity_username">username</string>
+    <string name="str_edt_main_activity_password">password</string>
+    <string name="str_btn_main_activity_login">登录</string>
+    <string name="str_btn_main_activity_register">注册</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
 </resources>

@@ -30,9 +30,9 @@
 	    android:text="@string/btn_activity_behind_help_text"
 	    android:background="#33a3dc" />
     <Button 
-        android:id="@+id/btn_activity_behind_teamintro"
+        android:id="@+id/btn_activity_behind_teaminfo"
         android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-	    android:text="@string/btn_activity_behind_teamintro_text"
+	    android:text="@string/btn_activity_behind_teaminfo_text"
 	    android:background="#33a3dc" />
 </LinearLayout>

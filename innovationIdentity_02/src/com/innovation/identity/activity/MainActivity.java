@@ -37,6 +37,10 @@ public class MainActivity extends SlidingActivity {
 	private ViewPager pager = null;
 	private SlidingMenu slidingMenu;
 	private Button btn_activity_behind_login;
+	private Button btn_activity_behind_homepage;
+	private Button btn_activity_behind_settings;
+	private Button btn_activity_behind_help;
+	private Button btn_activity_behind_teminfo;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -126,10 +130,14 @@ public class MainActivity extends SlidingActivity {
 		tabHost = (TabHost) findViewById(R.id.tabhost);
 		pager = (ViewPager) findViewById(R.id.viewpager);
 		btn_activity_behind_login=(Button) findViewById(R.id.btn_activity_behind_login);
-		
+		btn_activity_behind_homepage = (Button) findViewById(R.id.btn_activity_behind_homepage);
+		btn_activity_behind_settings = (Button) findViewById(R.id.btn_activity_behind_settings);
+		btn_activity_behind_help = (Button) findViewById(R.id.btn_activity_behind_help);
+		btn_activity_behind_teminfo = (Button) findViewById(R.id.btn_activity_behind_teaminfo);
 	}
 	private void addListener(){
 		btn_activity_behind_login.setOnClickListener(new BtnOnClickListener());
+		btn_activity_behind_settings.setOnClickListener(new BtnOnClickListener());
 	}
 	private class BtnOnClickListener implements OnClickListener{
 
@@ -137,11 +145,14 @@ public class MainActivity extends SlidingActivity {
 		public void onClick(View v) {
 			switch (v.getId()) {
 			case R.id.btn_activity_behind_login:
-				Intent intent=new Intent(MainActivity.this,LoginActivity.class);
-				startActivity(intent);
+				Intent intent1=new Intent(MainActivity.this,LoginActivity.class);
+				startActivity(intent1);
 				finish();
 				break;
-
+			case R.id.btn_activity_behind_settings:
+				Intent intent2 = new Intent(MainActivity.this,SettingsActivity.class);
+				startActivity(intent2);
+				break;
 			default:
 				break;
 			}

@@ -4,10 +4,13 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
+import android.widget.ListView;
 
 public class T1Activity extends Activity{
-	private Button btn_activity_t1_click;
+	private ListView list_activity_t1;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -17,22 +20,18 @@ public class T1Activity extends Activity{
 		addListener();
 	}
 	private void initWidgetAndVar(){
-		btn_activity_t1_click=(Button) this.findViewById(R.id.btn_activity_t1_select_image);
+		list_activity_t1=(ListView) this.findViewById(R.id.list_activity_t1);
 	}
 	private void addListener(){
-		btn_activity_t1_click.setOnClickListener(new BtnOnClickListener());
+		list_activity_t1.setOnItemClickListener(new ItemOnClickListener());;
 	}
-	private class BtnOnClickListener implements OnClickListener{
+	private class ItemOnClickListener implements OnItemClickListener{		
 
 		@Override
-		public void onClick(View v) {
-			switch (v.getId()) {
-			case R.id.btn_activity_t1_select_image:
-				btn_activity_t1_click.setText("Please Stop");
-				break;
-			default:
-				break;
-			}
+		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+				long arg3) {
+			// TODO Auto-generated method stub
+			
 		}
 	}
 }
