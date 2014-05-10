@@ -1,8 +1,8 @@
 package com.innovation.identity.common;
 
 public class Constant {
-	public final static String NETWORK_NOT_AVAILABLE="ÍøÂçÁ¬½Ó³ö´íÁË";
-	public final static String LOGIN_USERNAME_PASSWORD_WRONG="ÓÃ»§ÃûÃÜÂë²»Æ¥Åä";
+	public final static String NETWORK_NOT_AVAILABLE="ç½‘ç»œè¿æ¥å‡ºé”™äº†";
+	public final static String LOGIN_USERNAME_PASSWORD_WRONG="ç”¨æˆ·åå¯†ç ä¸åŒ¹é…";
 	public final static String SERVER_ADDRESS="http://10.0.2.2:8080/sshserver/";
 	//public final static String SERVER_ADDRESS="http://192.168.191.4:8080/sshserver/";
 }

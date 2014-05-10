@@ -24,13 +24,13 @@ import com.innovation.identity.loginregister.activity.LoginActivity;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivity;
 /**
- * Ö÷Activity,Ê×Ò³½çÃæ£¬×ó²à²Ëµ¥£¬ÓÒ²àtabhost
+ * ä¸»Activity,é¦–é¡µç•Œé¢ï¼Œå·¦ä¾§èœå•ï¼Œå³ä¾§tabhost
  * @author Xiaona
  *
  */
 @SuppressWarnings("deprecation")
 public class MainActivity extends SlidingActivity {
-	private List<View> listViews;// ÊÓÍ¼ÁĞ±í
+	private List<View> listViews;// è§†å›¾åˆ—è¡¨
 	private Context context = null;
 	LocalActivityManager manager = null;
 	TabHost tabHost = null;
@@ -60,17 +60,17 @@ public class MainActivity extends SlidingActivity {
 		manager = new LocalActivityManager(this, true);
 		manager.dispatchCreate(savedInstanceState);
 		/*
-		 * ÔÚÒ»¸öActivityµÄÒ»²¿·ÖÖĞÏÔÊ¾ÆäËûActivity¡±ÒªÓÃµ½LocalActivityManagerity
-		 * ×÷ÓÃÌåÏÖÔÚmanager»ñÈ¡View£ºmanager.startActivity(String,
+		 * åœ¨ä¸€ä¸ªActivityçš„ä¸€éƒ¨åˆ†ä¸­æ˜¾ç¤ºå…¶ä»–Activityâ€è¦ç”¨åˆ°LocalActivityManagerity
+		 * ä½œç”¨ä½“ç°åœ¨managerè·å–Viewï¼šmanager.startActivity(String,
 		 * Intent).getDecorView()
 		 */
 		tabHost.setup();
-		tabHost.setup(manager);// ÊµÀı»¯THost
+		tabHost.setup(manager);// å®ä¾‹åŒ–THost
 		context = MainActivity.this;
 		Intent i1 = new Intent(context, T1Activity.class);
 		Intent i2 = new Intent(context, T2Activity.class);
 		Intent i3 = new Intent(context, T3Activity.class);
-		listViews = new ArrayList<View>(); // ÊµÀı»¯listViews
+		listViews = new ArrayList<View>(); // å®ä¾‹åŒ–listViews
 		listViews.add(manager.startActivity("T1", i1).getDecorView());
 		listViews.add(manager.startActivity("T2", i2).getDecorView());
 		listViews.add(manager.startActivity("T3", i3).getDecorView());
@@ -80,14 +80,14 @@ public class MainActivity extends SlidingActivity {
 //				.inflate(R.layout.activity_t2_activity, null);
 //		LinearLayout tabIndicator3 = (LinearLayout) LayoutInflater.from(this)
 //				.inflate(R.layout.activity_t3_activity, null);
-		tabHost.addTab(tabHost.newTabSpec("A").setIndicator("ÈÈËÑ")
+		tabHost.addTab(tabHost.newTabSpec("A").setIndicator("çƒ­æœ")
 				.setContent(i1));
-		// TabSpecµÄÃû×ÖA£¬B£¬C²ÅÊÇ¸÷¸ötabµÄId
-		tabHost.addTab(tabHost.newTabSpec("B").setIndicator("Ê¶±ğ")
+		// TabSpecçš„åå­—Aï¼ŒBï¼ŒCæ‰æ˜¯å„ä¸ªtabçš„Id
+		tabHost.addTab(tabHost.newTabSpec("B").setIndicator("è¯†åˆ«")
 				.setContent(i2));
-		tabHost.addTab(tabHost.newTabSpec("C").setIndicator("ÊÕ²Ø")
+		tabHost.addTab(tabHost.newTabSpec("C").setIndicator("æ”¶è—")
 				.setContent(i3));
-		// ÎªtabhostÉèÖÃ¼àÌı
+		// ä¸ºtabhostè®¾ç½®ç›‘å¬
 		tabHost.setOnTabChangedListener(new OnTabChangeListener() {
 			@Override
 			public void onTabChanged(String tabId) {
@@ -95,7 +95,7 @@ public class MainActivity extends SlidingActivity {
 					@Override
 					public void onTabChanged(String tabId) {
 						if ("A".equals(tabId)) {
-							pager.setCurrentItem(0);// ÔÚtabhostµÄ¼àÌı¸Ä±äViewpager
+							pager.setCurrentItem(0);// åœ¨tabhostçš„ç›‘å¬æ”¹å˜Viewpager
 						}
 						if ("B".equals(tabId)) {
 							pager.setCurrentItem(1);
@@ -109,12 +109,12 @@ public class MainActivity extends SlidingActivity {
 			}
 		});
 
-		// ÎªViewPagerÊÊÅäºÍÉèÖÃ¼àÌı
+		// ä¸ºViewPageré€‚é…å’Œè®¾ç½®ç›‘å¬
 		pager.setAdapter(new MyPageAdapter(listViews));
 		pager.setOnPageChangeListener(new OnPageChangeListener() {
 			@Override
 			public void onPageSelected(int position) {
-				tabHost.setCurrentTab(position);// ÔÚViewpager¸Ä±ätabhost
+				tabHost.setCurrentTab(position);// åœ¨Viewpageræ”¹å˜tabhost
 			}
 
 			@Override
@@ -218,7 +218,7 @@ public class MainActivity extends SlidingActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// toggle¾ÍÊÇSlidingMenu×Ô¶¯ÅĞ¶ÏÊÇ´ò¿ª»¹ÊÇ¹Ø±Õ
+			// toggleå°±æ˜¯SlidingMenuè‡ªåŠ¨åˆ¤æ–­æ˜¯æ‰“å¼€è¿˜æ˜¯å…³é—­
 			toggle();
 			// getSlidingMenu().showMenu(); // show menu
 			// getSlidingMenu().showContent(); // show content

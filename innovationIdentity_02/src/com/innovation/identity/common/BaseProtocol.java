@@ -28,7 +28,7 @@ public class BaseProtocol {
 	}
 
 	/**
-	 * Ïò·şÎñÆ÷¶Ë·¢ËÍÇëÇó
+	 * å‘æœåŠ¡å™¨ç«¯å‘é€è¯·æ±‚
 	 * 
 	 * @param url
 	 * @throws Exception
@@ -42,14 +42,14 @@ public class BaseProtocol {
 	}
 
 	/**
-	 * µÃµ½·µ»ØÊı¾İ
+	 * å¾—åˆ°è¿”å›æ•°æ®
 	 * 
 	 * @param url
 	 * @return
 	 * @throws Exception
 	 */
 	protected void parse() throws Exception {
-		// TODO ×´Ì¬´¦Àí 500 200
+		// TODO çŠ¶æ€å¤„ç† 500 200
 		if (response.getStatusLine().getStatusCode() == 200) {
 			
 			BufferedReader bufferedReader2 = new BufferedReader(
@@ -62,7 +62,7 @@ public class BaseProtocol {
 	}
 
 	/**
-	 * Ïò·şÎñÆ÷·¢ËÍĞÅÏ¢
+	 * å‘æœåŠ¡å™¨å‘é€ä¿¡æ¯
 	 * 
 	 * @param key
 	 * @param value
@@ -72,7 +72,7 @@ public class BaseProtocol {
 	}
 
 	/**
-	 * ·µ»ØJSONObject¶ÔÏóÊı¾İÄ£ĞÍ
+	 * è¿”å›JSONObjectå¯¹è±¡æ•°æ®æ¨¡å‹
 	 * 
 	 * @return
 	 * @throws JSONException

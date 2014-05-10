@@ -24,7 +24,7 @@ public class LoginService {
 		
 	}
 	/**
-	 * µÇÂ½Ê±Ê¹ÓÃµÄÏß³Ì
+	 * ç™»é™†æ—¶ä½¿ç”¨çš„çº¿ç¨‹
 	 * @author Xiaona
 	 *
 	 */
@@ -50,20 +50,20 @@ public class LoginService {
 			user.setUsername(userModel.getUsername().getText().toString().trim());
 			user.setPassword(userModel.getPassword().getText().toString().trim());
 			if(!NetTools.isNetworkAvailable(context)){
-				sendCode(-1);//ÎŞÍøÂçÁ¬½Ó
+				sendCode(-1);//æ— ç½‘ç»œè¿æ¥
 			}
 			if(loginProtocol.checkLogin(user,context)){
-				sendCode(1);//µÇÂ½³É¹¦
+				sendCode(1);//ç™»é™†æˆåŠŸ
 			}
 			else{
-				sendCode(0);//ÓÃ»§ÃûÃÜÂë²»ÕıÈ·
+				sendCode(0);//ç”¨æˆ·åå¯†ç ä¸æ­£ç¡®
 			}
 		}
 	}
 	private Handler handler=new Handler(){
 		@SuppressLint("HandlerLeak")
 		public void handleMessage(Message msg) {
-			loadingDialog.dismiss();//¹Ø±Õ¶Ô»°¿ò
+			loadingDialog.dismiss();//å…³é—­å¯¹è¯æ¡†
 			Bundle bundle=msg.getData();
 			int code=bundle.getInt("code");
 			switch (code) {

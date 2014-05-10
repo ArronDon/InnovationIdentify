@@ -16,7 +16,7 @@ import com.innovation.identity.common.SharedPreferencesTool;
 import com.innovation.identity.loginregister.model.User;
 
 /**
- * 验证登陆
+ * 楠岃瘉鐧婚檰
  * 
  * @author Xiaona
  * 
@@ -52,18 +52,18 @@ public class LoginProtocol extends BaseProtocol {
 				params.put("createOn",
 						dateFormat.format(userJson.getCreateOn()));
 				sharedPreferencesTool.saveUserPrefences(params);
-				Log.v("tag", "用户"+userJson.getUsername()+"登陆成功");
+				Log.v("tag", "鐢ㄦ埛"+userJson.getUsername()+"鐧婚檰鎴愬姛");
 				return true;
 			}
 		} catch (Exception e) {
-			Log.v("Exception", "Message:登陆出现异常    method:LoginProtocol.checkLogin()");
+			Log.v("Exception", "Message:鐧婚檰鍑虹幇寮傚父    method:LoginProtocol.checkLogin()");
 			e.printStackTrace();
 		}
 		return false;
 	}
 
 	/**
-	 * 根据服务器返回的json数据生成user对象
+	 * 鏍规嵁鏈嶅姟鍣ㄨ繑鍥炵殑json鏁版嵁鐢熸垚user瀵硅薄
 	 * 
 	 * @return
 	 * @throws JSONException

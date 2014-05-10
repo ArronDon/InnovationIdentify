@@ -27,7 +27,7 @@ public class LoginActivity extends Activity{
 		addListener();
 	}
 	/**
-	 * ³õÊ¼»¯¿Ø¼ş
+	 * åˆå§‹åŒ–æ§ä»¶
 	 */
 	private void initWidgetAndVar(){
 		this.edt_main_activity_username=(EditText)this.findViewById(R.id.edt_main_activity_username);
@@ -42,14 +42,14 @@ public class LoginActivity extends Activity{
 		this.userModel.setUsername(this.edt_main_activity_username);
 	}
 	/**
-	 * ¸ø¿Ø¼şÌí¼Ó¼àÌı
+	 * ç»™æ§ä»¶æ·»åŠ ç›‘å¬
 	 */
 	private void addListener(){
 		this.btn_main_activity_login.setOnClickListener(new BtnOnClickListener());
 		this.btn_main_activity_register.setOnClickListener(new BtnOnClickListener());
 	}
 	/**
-	 * ¼àÌıÀà
+	 * ç›‘å¬ç±»
 	 * @author Xiaona
 	 *
 	 */

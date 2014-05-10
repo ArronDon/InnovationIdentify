@@ -4,7 +4,7 @@ import android.widget.EditText;
 
 
 /**
- * ÓÃÓÚµÇÂ½µÄ¿Ø¼şÄ£ĞÍ
+ * ç”¨äºç™»é™†çš„æ§ä»¶æ¨¡å‹
  * @author Xiaona
  *
  */

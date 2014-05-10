@@ -13,14 +13,14 @@ import android.telephony.TelephonyManager;
 import android.widget.Toast;
 
 /**
- * ÅĞ¶ÏNETÍøÂçÇé¿ö
+ * åˆ¤æ–­NETç½‘ç»œæƒ…å†µ
  * 
  * @author xiaona
  * 
  */
 public class NetTools {
 	/**
-	 * ÅĞ¶ÏAndroid¿Í»§¶ËÍøÂçÊÇ·ñÁ¬½Ó ÊÇ·ñÓĞ¿ÉÓÃµÄÁ¬½Ó£¬¶ø²»ÄÜÅĞ¶ÏÊÇ·ñÄÜÁ¬Íø
+	 * åˆ¤æ–­Androidå®¢æˆ·ç«¯ç½‘ç»œæ˜¯å¦è¿æ¥ æ˜¯å¦æœ‰å¯ç”¨çš„è¿æ¥ï¼Œè€Œä¸èƒ½åˆ¤æ–­æ˜¯å¦èƒ½è¿ç½‘
 	 * 
 	 * @param context
 	 * @return true false
@@ -47,7 +47,7 @@ public class NetTools {
 	}
 
 	/**
-	 * ¼ìÑéÍøÂçÁ¬½Ó ²¢toastÌáÊ¾
+	 * æ£€éªŒç½‘ç»œè¿æ¥ å¹¶toastæç¤º
 	 * 
 	 * @return true/false 
 	 */
@@ -56,15 +56,15 @@ public class NetTools {
 				.getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkInfo networkinfo = con.getActiveNetworkInfo();
 		if (networkinfo == null || !networkinfo.isAvailable()) {
-			// µ±Ç°ÍøÂç²»¿ÉÓÃ
-			Toast.makeText(context.getApplicationContext(), "ÇëÏÈÁ¬½ÓInternet£¡",
+			// å½“å‰ç½‘ç»œä¸å¯ç”¨
+			Toast.makeText(context.getApplicationContext(), "è¯·å…ˆè¿æ¥Internetï¼",
 					Toast.LENGTH_SHORT).show();
 			return false;
 		}
 		boolean wifi = con.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
 				.isConnectedOrConnecting();
-		if (!wifi) { // ÌáÊ¾Ê¹ÓÃwifi
-			Toast.makeText(context.getApplicationContext(), "½¨ÒéÄúÊ¹ÓÃWIFIÒÔ¼õÉÙÁ÷Á¿£¡",
+		if (!wifi) { // æç¤ºä½¿ç”¨wifi
+			Toast.makeText(context.getApplicationContext(), "å»ºè®®æ‚¨ä½¿ç”¨WIFIä»¥å‡å°‘æµé‡ï¼",
 					Toast.LENGTH_SHORT).show();
 		}
 		return true;
@@ -72,15 +72,15 @@ public class NetTools {
 	}
 
 	/**
-	 * ÅĞ¶ÏÍøÂçÁ¬½ÓÊÇ·ñ¿ÉÓÃ
+	 * åˆ¤æ–­ç½‘ç»œè¿æ¥æ˜¯å¦å¯ç”¨
 	 * 
-	 * @return true/false Á¬½Ó³É¹¦/Ê§°Ü
+	 * @return true/false è¿æ¥æˆåŠŸ/å¤±è´¥
 	 */
 	public static boolean isNetworkAvailable(Context context) {
 		ConnectivityManager cm = (ConnectivityManager) context
 				.getSystemService(Context.CONNECTIVITY_SERVICE);
 		if (cm == null) {
-		} else { // Èç¹û½ö½öÊÇÓÃÀ´ÅĞ¶ÏÍøÂçÁ¬½Ó//Ôò¿ÉÒÔÊ¹ÓÃ
+		} else { // å¦‚æœä»…ä»…æ˜¯ç”¨æ¥åˆ¤æ–­ç½‘ç»œè¿æ¥//åˆ™å¯ä»¥ä½¿ç”¨
 					// cm.getActiveNetworkInfo().isAvailable();
 			NetworkInfo[] info = cm.getAllNetworkInfo();
 			if (info != null) {
@@ -95,9 +95,9 @@ public class NetTools {
 	}
 
 	/**
-	 * ÅĞ¶ÏGPSÊÇ·ñ´ò¿ª
+	 * åˆ¤æ–­GPSæ˜¯å¦æ‰“å¼€
 	 * 
-	 * @return GPS : true/false ÊÇ·ñÓĞĞ§
+	 * @return GPS : true/false æ˜¯å¦æœ‰æ•ˆ
 	 */
 	public static boolean isGpsEnabled(Context context) {
 		LocationManager lm = ((LocationManager) context
@@ -107,9 +107,9 @@ public class NetTools {
 	}
 
 	/**
-	 * ÅĞ¶ÏWIFIÊÇ·ñ´ò¿ª
+	 * åˆ¤æ–­WIFIæ˜¯å¦æ‰“å¼€
 	 * 
-	 * @return GPS : true/false ÊÇ·ñÓĞĞ§
+	 * @return GPS : true/false æ˜¯å¦æœ‰æ•ˆ
 	 */
 	public static boolean isWifiEnabled(Context context) {
 		ConnectivityManager mgrConn = (ConnectivityManager) context
@@ -122,9 +122,9 @@ public class NetTools {
 	}
 
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÊÇ3GÍøÂç
+	 * åˆ¤æ–­æ˜¯å¦æ˜¯3Gç½‘ç»œ
 	 * 
-	 * @return GPS : true/false ÊÇ·ñÓĞĞ§
+	 * @return GPS : true/false æ˜¯å¦æœ‰æ•ˆ
 	 */
 	public static boolean is3rd(Context context) {
 		ConnectivityManager cm = (ConnectivityManager) context
@@ -138,9 +138,9 @@ public class NetTools {
 	}
 
 	/**
-	 * ÅĞ¶ÏÊÇÊÇ·ñÎªWIFI,ÓÃ»§µÄÌåÏÖĞÔÔÚÕâÀïÁË£¬wifi¾Í¿ÉÒÔ½¨ÒéÏÂÔØ»òÕßÔÚÏß²¥·Å
+	 * åˆ¤æ–­æ˜¯æ˜¯å¦ä¸ºWIFI,ç”¨æˆ·çš„ä½“ç°æ€§åœ¨è¿™é‡Œäº†ï¼Œwifiå°±å¯ä»¥å»ºè®®ä¸‹è½½æˆ–è€…åœ¨çº¿æ’­æ”¾
 	 * 
-	 * @return true/false ÊÇ·ñÓĞĞ§
+	 * @return true/false æ˜¯å¦æœ‰æ•ˆ
 	 */
 	public static boolean isWifi(Context context) {
 		ConnectivityManager cm = (ConnectivityManager) context
@@ -153,26 +153,26 @@ public class NetTools {
 		return false;
 	}
 	 /** 
-     * ¼ì²éÊÖ»úÉÏÊÇ·ñ°²×°ÁËÖ¸¶¨µÄÈí¼ş 
+     * æ£€æŸ¥æ‰‹æœºä¸Šæ˜¯å¦å®‰è£…äº†æŒ‡å®šçš„è½¯ä»¶ 
      * @param context 
-     * @param packageName£ºÓ¦ÓÃ°üÃû 
+     * @param packageNameï¼šåº”ç”¨åŒ…å 
      * @return 
      */  
     public static boolean isAvilible(Context context, String packageName){   
-        //»ñÈ¡packagemanager   
+        //è·å–packagemanager   
         final PackageManager packageManager = context.getPackageManager();  
-      //»ñÈ¡ËùÓĞÒÑ°²×°³ÌĞòµÄ°üĞÅÏ¢   
+      //è·å–æ‰€æœ‰å·²å®‰è£…ç¨‹åºçš„åŒ…ä¿¡æ¯   
         List<PackageInfo> packageInfos = packageManager.getInstalledPackages(0);  
-      //ÓÃÓÚ´æ´¢ËùÓĞÒÑ°²×°³ÌĞòµÄ°üÃû   
+      //ç”¨äºå­˜å‚¨æ‰€æœ‰å·²å®‰è£…ç¨‹åºçš„åŒ…å   
         List<String> packageNames = new ArrayList<String>();  
-        //´ÓpinfoÖĞ½«°üÃû×ÖÖğÒ»È¡³ö£¬Ñ¹ÈëpName listÖĞ   
+        //ä»pinfoä¸­å°†åŒ…åå­—é€ä¸€å–å‡ºï¼Œå‹å…¥pName listä¸­   
         if(packageInfos != null){   
             for(int i = 0; i < packageInfos.size(); i++){   
                 String packName = packageInfos.get(i).packageName;   
                 packageNames.add(packName);   
             }   
         }   
-      //ÅĞ¶ÏpackageNamesÖĞÊÇ·ñÓĞÄ¿±ê³ÌĞòµÄ°üÃû£¬ÓĞTRUE£¬Ã»ÓĞFALSE   
+      //åˆ¤æ–­packageNamesä¸­æ˜¯å¦æœ‰ç›®æ ‡ç¨‹åºçš„åŒ…åï¼Œæœ‰TRUEï¼Œæ²¡æœ‰FALSE   
         return packageNames.contains(packageName);  
   }   
 }

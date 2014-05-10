@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 /**
- * ¹¹Ôìµ¥ÀıÓÃÓÚ´æ´¢»ñµÃÓÃ»§Æ«ºÃ£¨ÈçÓÃ»§ĞÅÏ¢£¬ÓÃ»§ÊÕ²ØµÈµÈ£©
+ * æ„é€ å•ä¾‹ç”¨äºå­˜å‚¨è·å¾—ç”¨æˆ·åå¥½ï¼ˆå¦‚ç”¨æˆ·ä¿¡æ¯ï¼Œç”¨æˆ·æ”¶è—ç­‰ç­‰ï¼‰
  * @author Xiaona
  *
  */
@@ -15,14 +15,14 @@ public class SharedPreferencesTool {
 	private SharedPreferences sharedPreferences;
 	private static SharedPreferencesTool sharedPreferencesTool;
 	/**
-	 * Ë½ÓĞ¹¹Ôì·½·¨£¬µ¥ÀıÄ£Ê½
+	 * ç§æœ‰æ„é€ æ–¹æ³•ï¼Œå•ä¾‹æ¨¡å¼
 	 * @param context
 	 */
 	private SharedPreferencesTool(Context context){
 		this.context=context;
 	}
 	/**
-	 * Í¨¹ı¸Ã·½·¨»ñµÃSharedPreferencesTool¶ÔÏó
+	 * é€šè¿‡è¯¥æ–¹æ³•è·å¾—SharedPreferencesToolå¯¹è±¡
 	 * @param context
 	 * @return
 	 */
@@ -41,7 +41,7 @@ public class SharedPreferencesTool {
 		editor.commit();
 	}
 	/**
-	 * ¶ÁÈ¡identity_user_preferences£¬·µ»ØmapÀàĞÍµÄÊı¾İ
+	 * è¯»å–identity_user_preferencesï¼Œè¿”å›mapç±»å‹çš„æ•°æ®
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
