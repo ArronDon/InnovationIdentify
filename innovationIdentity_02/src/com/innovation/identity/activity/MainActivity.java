@@ -26,7 +26,7 @@ import com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivity;
 /**
  * 主Activity,首页界面，左侧菜单，右侧tabhost
  * @author Xiaona
- *
+ *utf-8
  */
 @SuppressWarnings("deprecation")
 public class MainActivity extends SlidingActivity {
