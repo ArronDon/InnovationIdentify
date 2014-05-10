@@ -76,12 +76,12 @@ public class MainActivity extends SlidingActivity {
 //				.inflate(R.layout.activity_t2_activity, null);
 //		LinearLayout tabIndicator3 = (LinearLayout) LayoutInflater.from(this)
 //				.inflate(R.layout.activity_t3_activity, null);
-		tabHost.addTab(tabHost.newTabSpec("A").setIndicator("识别")
+		tabHost.addTab(tabHost.newTabSpec("A").setIndicator("热搜")
 				.setContent(i1));
 		// TabSpec的名字A，B，C才是各个tab的Id
-		tabHost.addTab(tabHost.newTabSpec("B").setIndicator("收藏")
+		tabHost.addTab(tabHost.newTabSpec("B").setIndicator("识别")
 				.setContent(i2));
-		tabHost.addTab(tabHost.newTabSpec("C").setIndicator("消息")
+		tabHost.addTab(tabHost.newTabSpec("C").setIndicator("收藏")
 				.setContent(i3));
 		// 为tabhost设置监听
 		tabHost.setOnTabChangedListener(new OnTabChangeListener() {

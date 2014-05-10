@@ -17,7 +17,7 @@ public class T1Activity extends Activity{
 		addListener();
 	}
 	private void initWidgetAndVar(){
-		btn_activity_t1_click=(Button) this.findViewById(R.id.btn_activity_t1_click);
+		btn_activity_t1_click=(Button) this.findViewById(R.id.btn_activity_t1_select_image);
 	}
 	private void addListener(){
 		btn_activity_t1_click.setOnClickListener(new BtnOnClickListener());
@@ -27,7 +27,7 @@ public class T1Activity extends Activity{
 		@Override
 		public void onClick(View v) {
 			switch (v.getId()) {
-			case R.id.btn_activity_t1_click:
+			case R.id.btn_activity_t1_select_image:
 				btn_activity_t1_click.setText("Please Stop");
 				break;
 			default:

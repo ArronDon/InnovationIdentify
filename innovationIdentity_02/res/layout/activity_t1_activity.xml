@@ -5,12 +5,20 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/btn_activity_t1_click"
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_activity_t1_start_camera"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"
         android:textSize="22sp"
-        android:text="@string/tab1" />
+        android:text="@string/tab2_start_camera_text" />
+    <Button
+        android:id="@+id/btn_activity_t1_select_image"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="22sp"
+        android:text="@string/tab2_select_image_text" />
 
 </LinearLayout>

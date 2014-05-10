@@ -3,8 +3,13 @@
     <string name="app_name">innovationIdentity_01</string>
     <!-- main -->
     <string name="btn_activity_behind_login_text">登录</string>
+    <string name="btn_activity_behind_homepage_text">首页</string>
+    <string name="btn_activity_behind_settings_text">设置</string>
+    <string name="btn_activity_behind_help_text">帮助</string>
+    <string name="btn_activity_behind_teamintro_text">关于Innovation</string>
     <!-- tab textview -->
-    <string name="tab1">Click me</string>
+    <string name="tab2_start_camera_text">拍照</string>
+    <string name="tab2_select_image_text">选择图片</string>
     <string name="tab2">Click me again</string>
     <string name="tab3">Click me again please</string>
     <!-- 登陆模块 -->
