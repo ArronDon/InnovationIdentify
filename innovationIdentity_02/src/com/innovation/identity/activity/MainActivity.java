@@ -3,11 +3,17 @@ package com.innovation.identity.activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Activity;
 import android.app.LocalActivityManager;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.provider.MediaStore;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -15,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 
@@ -41,6 +48,9 @@ public class MainActivity extends SlidingActivity {
 	private Button btn_activity_behind_settings;
 	private Button btn_activity_behind_help;
 	private Button btn_activity_behind_teminfo;
+	private Button btn_activity_t2_select;
+	
+	private ImageView imgview_activity_t2_show;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -81,12 +91,12 @@ public class MainActivity extends SlidingActivity {
 //		LinearLayout tabIndicator3 = (LinearLayout) LayoutInflater.from(this)
 //				.inflate(R.layout.activity_t3_activity, null);
 		tabHost.addTab(tabHost.newTabSpec("A").setIndicator("热搜")
-				.setContent(i1));
+				.setContent(i1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)));
 		// TabSpec的名字A，B，C才是各个tab的Id
 		tabHost.addTab(tabHost.newTabSpec("B").setIndicator("识别")
-				.setContent(i2));
+				.setContent(i2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)));
 		tabHost.addTab(tabHost.newTabSpec("C").setIndicator("收藏")
-				.setContent(i3));
+				.setContent(i3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)));
 		// 为tabhost设置监听
 		tabHost.setOnTabChangedListener(new OnTabChangeListener() {
 			@Override
@@ -134,6 +144,8 @@ public class MainActivity extends SlidingActivity {
 		btn_activity_behind_settings = (Button) findViewById(R.id.btn_activity_behind_settings);
 		btn_activity_behind_help = (Button) findViewById(R.id.btn_activity_behind_help);
 		btn_activity_behind_teminfo = (Button) findViewById(R.id.btn_activity_behind_teaminfo);
+		btn_activity_t2_select = (Button)findViewById(R.id.btn_activity_t2_select_image);
+		imgview_activity_t2_show = (ImageView)findViewById(R.id.imgview_activity_t2_show);
 	}
 	private void addListener(){
 		btn_activity_behind_login.setOnClickListener(new BtnOnClickListener());
@@ -227,4 +239,21 @@ public class MainActivity extends SlidingActivity {
 
 		return super.onOptionsItemSelected(item);
 	}
-}
+	@Override 
+	protected void onActivityResult(int requestCode,int resultCode,Intent data){
+		
+		super.onActivityResult(requestCode, resultCode, data);
+		Activity subActivity = manager.getCurrentActivity();
+		if(subActivity instanceof OnTabActivityResultListener){
+			OnTabActivityResultListener listener = (OnTabActivityResultListener)subActivity;
+			listener.onTabActivityResult(requestCode, resultCode, data);
+		}
+		
+		
+	}//onActivityResult
+	//自定义接口
+	public interface OnTabActivityResultListener {
+		public void onTabActivityResult(int requestCode, int resultCode, Intent data); 
+	}
+	
+}//class

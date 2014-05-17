@@ -11,6 +11,7 @@
     <!-- tab textview -->
     <string name="tab2_start_camera_text">拍照</string>
     <string name="tab2_select_image_text">选择图片</string>
+    <string name="tab2_search_text">搜索图片</string>
     <string name="tab2">Click me again</string>
     <string name="tab3">Click me again please</string>
     <!-- 登陆模块 -->
