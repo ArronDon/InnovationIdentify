@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//src/com/innovation/identity/activity/MainActivity.java=UTF-8
+encoding//src/com/innovation/identity/activity/SettingsActivity.java=UTF-8
+encoding//src/com/innovation/identity/activity/T1Activity.java=UTF-8
+encoding//src/com/innovation/identity/activity/T2Activity.java=UTF-8
+encoding//src/com/innovation/identity/activity/T3Activity.java=UTF-8
+encoding//src/com/innovation/identity/common/BaseProtocol.java=UTF-8
+encoding//src/com/innovation/identity/common/Constant.java=UTF-8
+encoding//src/com/innovation/identity/common/SharedPreferencesTool.java=UTF-8
+encoding//src/com/innovation/identity/loginregister/activity/LoginActivity.java=UTF-8
+encoding//src/com/innovation/identity/loginregister/model/User.java=UTF-8
+encoding//src/com/innovation/identity/loginregister/model/UserLoginWidgetModel.java=UTF-8
+encoding//src/com/innovation/identity/loginregister/protocol/LoginProtocol.java=UTF-8
+encoding//src/com/innovation/identity/loginregister/service/LoginService.java=UTF-8
+encoding//src/com/innovation/identity/loginregister/service/RegisterService.java=UTF-8
+encoding//src/com/innovation/identity/util/NetTools.java=UTF-8
